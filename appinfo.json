@@ -1,17 +1,14 @@
 {
-    "versionLabel": "2.0.1",
-    "uuid": "79206a03-76a9-452f-b320-f2a7fc9850ec",
-    "appKeys": {},
-    "longName": "MiniDungeon",
-    "versionCode": 3,
-    "capabilities": [
-        ""
-    ],
-    "shortName": "MiniDungeon",
-    "companyName": "Torivon",
+    "uuid": "221c8f70-5b17-11e4-8ed6-0800200c9a66",
+    "shortName": "MoniDungeon",
+    "longName": "MoniDungeon",
+    "companyName": "hedachi",
+    "versionCode": 4,
+    "versionLabel": "3.0",
     "watchapp": {
         "watchface": false
     },
+    "appKeys": {},
     "resources": {
         "media": [
             {
