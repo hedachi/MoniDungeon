@@ -60,7 +60,11 @@ void ClearInventory(void)
 	int i;
 	for(i = 0; i < ITEM_TYPE_COUNT; ++i)
 	{
-		itemsOwned[i] = 0;
+		if (i == 0) { //if potion
+			itemsOwned[i] = 3;
+		} else {
+			itemsOwned[i] = 0;
+		}
 	}
 }
 
@@ -133,7 +137,7 @@ void ItemGainMenuInit(Window *window)
 			AddItem(i);
 			break;
 		}
-		++i;      
+		++i;
 	} while (i < ITEM_TYPE_COUNT);
 }
 
@@ -151,7 +155,7 @@ bool AttemptToUseHealingItem(ItemType type, int power)
 		--itemsOwned[type];
 		ShowAllItemCounts();
 		return true;
-	}  
+	}
 	return false;
 }
 

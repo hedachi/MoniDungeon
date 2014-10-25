@@ -28,7 +28,8 @@ MenuDefinition adventureMenuDef =
 {
 	.menuEntries = 
 	{
-		{"Main", "Open the main menu", ShowMainMenu},
+		{"Go", "Use stamina and go", GoUsingStamina},
+		{"Menu", "Open the main menu", ShowMainMenu}
 #if ALLOW_TEST_MENU
 		{NULL, NULL, NULL},
 		{NULL, NULL, NULL},
@@ -160,6 +161,14 @@ bool ComputeRandomEvent(bool fastMode)
 		++i;      
     } while (i < 4);
 	return true;
+}
+
+void GoUsingStamina(void) { 
+	if (SpendStamina()) {
+		UpdateAdventure();
+	} else {
+		SetMenuDescription("Stamina is zero.");
+	}
 }
 
 void UpdateAdventure(void)

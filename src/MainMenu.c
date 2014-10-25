@@ -70,8 +70,8 @@ void ShowTestMenu(void)
 
 //************* Main Menu *****************//
 
-static bool vibration = true;
-static int fastMode = false;
+static bool vibration = false;
+static int fastMode = true;
 
 void DrawOptionsMenu(void)
 {

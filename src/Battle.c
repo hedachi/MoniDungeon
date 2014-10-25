@@ -110,11 +110,7 @@ void BattleUpdate(void)
 		INFO_LOG("Player wins.");
 		CloseBattleWindow();
 		GrantGold(currentFloor * currentMonster->goldScale);
-		if(currentFloor == 20)
-		{
-			ShowEndWindow();
-		}
-		else if(GrantExperience(currentFloor))
+		if(GrantExperience(currentFloor))
 		{
 			LevelUp();
 		}
